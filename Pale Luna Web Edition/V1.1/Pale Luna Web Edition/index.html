@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECOS DA NOITE | Web Edition</title>
+    <style>
+        /* CSS para simular a estética de terminal */
+        body {
+            background-color: black;
+            color: #00ff00; /* Verde néon (simulação TTY) */
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            padding: 20px;
+            overflow: auto;
+        }
+        #game-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #00ff00;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+        #text-box {
+            white-space: pre-wrap; /* Preserva quebras de linha e espaços */
+            min-height: 400px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #00ff00;
+        }
+        #status-bar {
+            padding: 5px 0;
+            border-bottom: 1px solid #00ff00;
+            margin-bottom: 10px;
+        }
+        #choice-box button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            background-color: #333;
+            color: #ff0; /* Amarelo para as opções */
+            border: 1px solid #ff0;
+            text-align: left;
+            font-family: inherit;
+            cursor: pointer;
+            transition: background-color 0.1s;
+        }
+        #choice-box button:hover {
+            background-color: #00ff00;
+            color: black;
+        }
+        /* CLASSES DE COR */
+        .ascii-art {
+            color: #00FFFF; /* Ciano para a arte ASCII */
+        }
+        .red-text { color: red; }
+        .green-text { color: #00ff00; }
+        .cyan-text { color: cyan; }
+        .yellow-text { color: yellow; }
+        .center-text { text-align: center; display: block; }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="status-bar"></div>
+        <div id="text-box"></div>
+        <div id="choice-box"></div>
+    </div>
+
+    <script src="main-web.js"></script> 
+</body>
+</html>
